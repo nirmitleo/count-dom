@@ -1,2 +1,2 @@
-# vanilla-social-media-chrome-extension
-A simple chrome extension which connects to popular social media accounts like quora, linkedin, facebook etc
+# vanilla-dom-counter
+A simple chrome extension which returns the count of DOM elements on a page.
