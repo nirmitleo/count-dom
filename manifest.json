@@ -1,0 +1,36 @@
+{
+    "manifest_version": 2,
+    "name": "DOM counter",
+    "version": "1.0.0",
+    "description": "Counts the total number of DOM elements on this page",
+    "icons": {
+        "16": "images/icon_19.png",
+        "128": "images/icon_128.png"
+    },
+    "browser_action": {
+        "default_icon": "images/icon_19.png",
+        "default_popup": "popup.html"
+    },
+    "background": {
+        "page": "popup.html",
+        "persistent": true
+    },
+    "content_scripts": [
+        {
+            "all_frames": true,
+            "js": [
+                "scripts/background.js"
+            ],
+            "matches": [
+                "http://*/*",
+                "https://*/*"
+            ],
+            "run_at": "document_start"
+        }
+    ],
+    "permissions": [
+        "activeTab",
+        "tabs",
+        "contextMenus"
+    ]
+}
